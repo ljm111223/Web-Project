@@ -1,4 +1,4 @@
-# 项目经历
+# 项目介绍
 ### 基于Vue.js的移动端电商网站重构
 - 技术栈：Vue、 Vuex、 Vue-router、 ES6、 AJAX
 - [预览地址](https://ljm111223.github.io/Web-Project/Cnode/index.html)：https://ljm111223.github.io/Web-Project/Cnode/index.html
