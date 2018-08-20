@@ -1,0 +1,179 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,*::before{
+    box-sizing: border-box;
+}
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+
+}
+
+.bg{
+    background-image: url(http://music.163.com/api/img/blur/109951163064544587);
+    opacity: 1;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+}
+
+.bg::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: " ";
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+
+/*.page::after{*/
+/*position: absolute;*/
+/*left: 0;*/
+/*right: 0;*/
+/*content: " ";*/
+/*bottom: 0;*/
+/*top: 0;*/
+/*background-color: rgba(0,0,0,.5);*/
+/*}*/
+.logo{
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    width: 30vw;
+}
+.disc-container{
+    position: relative;
+}
+
+.disc-container .pointer{
+    position: absolute;
+    width: 24vw;
+    left: 44vw;
+    z-index: 10;
+}
+.disc-container .disc{
+    margin-top: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.disc-container .disc img{
+    animation: circle 20s infinite linear;
+    animation-play-state: paused;
+}
+.disc-container .disc .icon{
+    position: absolute;
+    z-index: 30;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    padding: 2vw 2vw 2vw 4vw;
+    border: 1px white solid;
+    background-color: rgba(0,0,0,0.3);
+    fill: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.disc-container .active img{
+
+    animation-play-state: running;
+}
+.disc-container .circle{
+    position: absolute;
+    width: 80vw;
+}
+.disc-container .light{
+    position: absolute;
+    width: 80vw;
+}
+.disc-container .cover{
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+}
+.song-lyric{
+    flex-grow: 1;
+    margin-top: 20vw;
+    line-height: 30px;
+    color: #aaa;
+    font-size: 16px;
+    text-align: center;
+}
+.song-lyric .lyrics{
+
+    font-family: Helvetica,sans-serif;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.song-lyric .lyrics p.active{
+    color: white;
+}
+.song-lyric h1{
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+}
+.song-lyric h1 span{
+    color: #aaa;
+    font-size: 16px;
+}
+.links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vw;
+}
+.links a{
+    text-decoration: none;
+    margin:0 1.5vw ;
+    width: 46vw;
+    padding: 2vw;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #d33a31;
+    border-radius: 50px;
+    letter-spacing: 1vw;
+}
+.links .downloads{
+    background-color: #d33a31;
+    color: white;
+}
+.links .open{
+    color: #d33a31;
+}
+
